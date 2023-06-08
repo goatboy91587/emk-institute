@@ -1,0 +1,16 @@
+.pxblock--media {
+
+    .image {
+       text-align: center;
+    }
+    .video--link {
+
+    }
+    .video--file {
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.pxblock--accordion {
+
+    .accordion {
+
+        // accordion header content area
+        &__content {
+
+        }
+
+        // drawer holder 
+        &__drawers {
+
+            // code for individual drawers
+            .drawer {
+                max-width: 900px;
+                margin: 0 auto;
+                // drawer title is also the trigger to show the drawer content
+                .drawer__title {
+                    cursor: pointer;
+                    padding: 20px;
+                    border-bottom: 1px solid $light-gray;
+                    position: relative;
+
+                    &:after {
+                        content: '+';
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 10px;
+                    }
+                }
+
+                .drawer__content {
+                    padding: 20px;
+                    background-color: $light-gray;
+                }
+
+                
+                
+            }
+        }
+    }
+}

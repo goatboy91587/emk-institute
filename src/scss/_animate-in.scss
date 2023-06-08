@@ -1,0 +1,49 @@
+$child-anim-delay : 250ms;
+
+@include bp($m){
+
+	.animate-in {
+
+		&:not(.animate-children),
+		&.animate-children > * {
+			opacity: 0;
+			transition: opacity $speed $easing;
+			transform: translate3d(-25px, 0, 0);
+		}
+
+		&.animate-children {
+
+			@for $i from 1 through 15 {
+
+				>*:nth-child(#{$i}) {
+					transition-delay: ($i - 1)* $child-anim-delay;
+				}
+			}
+		}
+
+		&.animated {
+
+			&:not(.animate-children){
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+
+			&.animate-children {
+				> * {
+					opacity: 1;
+					transform: translate3d(0,0,0);
+				}
+			}
+		}
+	}
+
+	body.wp-admin {
+		.animate-in {
+
+			&:not(.animate-children),
+			&.animate-children > * {
+				opacity: 1;
+			}
+		}
+	}
+}

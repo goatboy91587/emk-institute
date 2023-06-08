@@ -1,0 +1,44 @@
+.pxblock--image-overlap {
+    .container {
+        position: relative;
+        overflow: hidden;
+    }
+    .primary-image {
+        position: relative;
+        z-index: 2;
+        img {
+            object-fit: cover;
+            width: 520px;
+            height: 520px;
+            margin: 120px auto;
+        }
+    }
+
+    .secondary-image {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 45, 42, 0.76);
+
+            @include bp($m) {
+                left: 180px;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: auto;
+
+            @include bp($m) {
+                margin-left: 180px;
+            }
+        }
+    }
+}

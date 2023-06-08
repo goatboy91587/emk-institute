@@ -1,0 +1,30 @@
+.pxblock--text-and-media {
+
+    &.layout--media-text {
+        .container {
+            .columns {
+                .text {
+                    order: 2;
+                }
+                .media {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+.columns {
+    .text {
+
+    }
+    .media {
+        .video-file {
+            video {
+             
+            }
+        }
+
+    }
+}
+
+}

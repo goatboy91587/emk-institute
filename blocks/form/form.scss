@@ -1,0 +1,87 @@
+.pxblock--form {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 0;
+
+    @include bp($m) {
+        margin: 100px auto;
+        padding: 80px 0;
+    }
+
+    .form {
+        &__content {
+            margin-bottom: 20px;
+        }
+
+        &__body {
+
+            .empty {
+                text-align: center;
+                color: red;
+            }
+        }
+    }
+
+    input[type="submit"],
+    button {
+        cursor: pointer;
+        padding-top: 7px;
+        padding-bottom: 8px;
+    }
+
+    // inputs
+    input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+    textarea {
+        background-color: $light-gray;
+        border: none;
+    }
+
+    select {
+        border: 1px solid $light-gray;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    fieldset {
+        margin: 0 0 30px 0;
+    }
+
+    .placeholder {
+        display: none; // I don't think these matter
+        // opacity: .1;
+    }
+
+    input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+    textarea,
+    select,
+    label {
+        display: block;
+        width: 100%;
+    }
+    input,
+    textarea,
+    select {
+        margin-bottom: 15px;
+    }
+
+    label {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    .gform_wrapper {
+        .gform_title {
+            display: none;
+        }
+
+        .gform_fields {
+
+
+        }
+    }
+}

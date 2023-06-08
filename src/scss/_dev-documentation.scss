@@ -1,0 +1,19 @@
+.dev-documentation {
+	width: 100%;
+	height: auto;
+	padding: 100px 0;
+
+	.section {
+		margin-bottom: 100px;
+		padding-bottom: 30px;
+		border-bottom: 2px solid $white;
+	}
+
+	code {
+		padding: 20px;
+		background: #181818;
+		margin: 20px 0;
+		display: block;
+		width: 100%;
+	}
+}

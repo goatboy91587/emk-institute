@@ -1,0 +1,18 @@
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - step:
+        name: 'Deployment to Staging'
+        deployment: staging
+        script:
+        - pipe: atlassian/rsync-deploy:0.7.1
+          variables:
+            USER: 'machineaccess'
+            SERVER: $PX_SERVER_ADDRESS
+            REMOTE_PATH: '/var/www/starter-theme-playground/wp-content/themes/starter-theme-playground/'
+            LOCAL_PATH: '${BITBUCKET_CLONE_DIR}/'
+            SSH_KEY: $PX_SSH_KEY
+            SSH_PORT: $PX_SERVER_PORT
+            DEBUG: 'true'
+            EXTRA_ARGS: '-rltu --no-perms --omit-dir-times --exclude-from=./bitbucket-exclude.txt'

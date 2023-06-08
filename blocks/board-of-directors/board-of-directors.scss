@@ -1,0 +1,38 @@
+.pxblock--board-of-directors {
+    [data-micromodal-trigger] {
+        cursor: pointer;
+        img {
+            opacity: 1;
+            transition: $speed $easing;
+           
+            @include bp($m){
+                height: 248px;
+            }
+        }
+        &:hover {
+            img {
+                opacity: .7;
+            }
+        }
+    }
+
+    .profile-modal__content {
+        .profile__right {
+           
+            .profile__content {
+                overflow-y: auto;
+                position: relative;
+                max-height: 500px;
+                padding-right: 10px;
+                padding-bottom: 20px;
+                .Leadership-bio {
+                    overflow-y: auto;
+                position: relative;
+                max-height: 500px;
+                padding-right: 10px;
+                padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}

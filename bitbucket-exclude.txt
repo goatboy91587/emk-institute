@@ -1,0 +1,11 @@
+.*
+node_modules
+src*
+plop-templates*
+bitbucket-exclude.txt
+bitbucket-pipelines.yml
+webpack.mix.js
+yarn.lock
+.eslintrc.js
+plopfile.js
+README.md

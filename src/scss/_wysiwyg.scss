@@ -1,0 +1,36 @@
+.wysiwyg,
+.mce-content-body {
+
+	>*:last-child {
+		margin-bottom: 0;
+
+		.btn {
+			margin-bottom: 0;
+		}
+	}
+
+	*:first-child {
+		margin-top: 0;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+
+	p:not([class]),
+	ol,
+	ul {
+		margin-bottom: 1em;
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 1em;
+	}
+
+	ol {
+		list-style: decimal;
+		padding-left: 1.2em;
+	}
+
+}

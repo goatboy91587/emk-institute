@@ -1,0 +1,21 @@
+.pxblock {
+	padding: 50px 0;
+
+	&.padding {
+		// global clone padding options //
+		&--none {
+			padding: 0;
+		}
+		&--small {
+			padding: 50px 0;
+		}
+		&--medium {
+			padding: 75px 0;
+		}
+		&--large {
+			padding: 100px 0;
+		}
+	}
+}
+
+

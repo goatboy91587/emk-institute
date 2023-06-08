@@ -1,0 +1,29 @@
+#pxMainContent .pxblock:first-child {
+    padding-top: 140px;
+
+    @include bp($m) {
+        padding-top: 200px;
+    }
+}
+
+.indented-tag {
+    font-family: $basic_reg;
+    &:before {
+        background: currentColor;
+    }
+}
+
+.arrow-link {
+    font-family: $basic_reg;
+}
+
+#senate-events {
+    .container {
+        .lg\:flex {
+            .wysiwyg {
+                    padding: 50px;
+                    transition: $speed $easing;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.pxblock {
+	padding: 50px 0;
+
+    &.bg {
+        &--light-blue {
+            background-color: $light-blue;
+        }
+        &--blue {
+            background-color: $blue;
+        }
+        &--gray {
+            background-color: $gray;
+        }
+    }
+
+}
+
+// global clone background colors

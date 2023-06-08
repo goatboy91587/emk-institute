@@ -1,0 +1,66 @@
+header nav > ul {
+
+    @include bpmax($m) {
+        overflow-y: auto;
+    
+    }
+
+    @include bpmax($m) {
+        font-size: 1.5em;
+    }
+    > li {
+        position: relative;
+
+        &:hover {
+            .sub-menu {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    li {
+
+
+        @include bpmax($m) {
+            margin-left: 0 !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        
+        }
+    }
+
+    .sub-menu {
+
+        flex-direction: column;
+        @include bpmax($m) {
+            padding-left: 20px;
+            font-size: .8em;
+            margin-top: 5px;
+            li {
+                margin: 5px 0;
+            }
+        }
+        @include bp($m) {
+            min-width: 250px;
+            opacity: 0;
+            transition: $speed $easing;
+            transform: translateY(20px);
+            pointer-events: none;
+            position: absolute;
+            left: -35px;
+            display: flex;
+            background: #fff;
+            box-shadow: 4px 2px 26px 4px #0000002B;
+
+
+            a {
+                display: block;
+                color: $blue;
+                padding: 10px 20px;
+            }
+        }
+
+    }
+}
